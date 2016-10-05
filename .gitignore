@@ -1,0 +1,5 @@
+
+.gitignore
+.idea/
+graphQL.iml
+node_modules/
