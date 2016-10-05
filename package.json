@@ -1,0 +1,15 @@
+{
+  "name": "datapoint-graphql-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "“Andrew <“andrewpoyntz@hotmail.com”> (“http://www.andrewpoyntz.co.uk)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "graphql": "^0.7.1",
+    "express-graphql": "^0.5.4",
+    "node-fetch": "^1.6.3"
+  }
+}
