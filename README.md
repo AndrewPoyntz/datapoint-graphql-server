@@ -10,4 +10,6 @@ then run:
 
 ```node index.js <YOUR_DATAPOINT_KEY>```
 
-To get your own DataPoint key head on over to http://www.metoffice.gov.uk/datapoint & register - it's free!
+Then you'll be able to go to http://localhost:3000/graphql to test out running some queries :sunglasses:
+
+To get your own DataPoint key head on over to http://www.metoffice.gov.uk/datapoint & register - it's free! :clap: :+1:

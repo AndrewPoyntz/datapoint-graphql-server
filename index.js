@@ -13,8 +13,8 @@ if (typeof process.argv[2] !== "undefined") {
 		graphiql: true,
 	}));
 	app.listen(PORT);
-	console.log('running');
+	console.log('running on port 3000, go to http://localhost:3000/graphql to play with some queries');
 } else {
-	console.log('You must pass your datapoint key as a command line argument');
+	console.error('You must pass your datapoint key as a command line argument');
 	process.exit(-1);
 }
