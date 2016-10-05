@@ -1,9 +1,13 @@
 # datapoint graphql server
-Mostly for me to play with graphQL, but maybe this will become a proper (very un-offical!) graphQL wrapper for Met Office datapoint
+Mostly for me to play with graphQL, but maybe this will become a proper (very un-official!) graphQL wrapper for Met Office DataPoint
 
-To run, check it out, run:
+###To run, 
+check it out, & grab the dependencies:
+
 ```npm i```
-then:
+
+then run:
+
 ```node index.js <YOUR_DATAPOINT_KEY>```
 
-to get your own datapoint key head on over to http://www.metoffice.gov.uk/datapoint & register - it's free!
+To get your own DataPoint key head on over to http://www.metoffice.gov.uk/datapoint & register - it's free!
