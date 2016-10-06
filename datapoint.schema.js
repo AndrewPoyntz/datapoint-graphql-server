@@ -5,19 +5,35 @@ var GraphQLString = graphql.GraphQLString;
 var GraphQLSchema = graphql.GraphQLSchema;
 var GraphQLList = graphql.GraphQLList;
 
-var getForecastLocations = function () {
+var getForecastLocations = function (args) {
 	'use strict';
 	return fetch('http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/sitelist?key='+GLOBAL.dataPointKey)
 		.then(res => res.json())
 		.then(json => json.Locations.Location)
+		.then((locations)=> {
+			if (args.id){
+				for (var i =0; i < locations.length; i++){
+					if (locations[i].id === args.id){
+						return [locations[i]];
+					}
+				}
+			} else {
+				return locations;
+			}
+		})
 };
 const LocationList = new GraphQLObjectType({
 	name:'LocationList',
 	description:'A list of the UK forecast locations',
 	fields: () => ({
-		allLocations: {
+		locations: {
 			type: new GraphQLList(LocationType),
-			resolve: root => getForecastLocations()
+			args:{
+				id:{
+					type:GraphQLString
+				}
+			},
+			resolve: (root, id) => {return getForecastLocations(id)}	
 		}
 	})
 });
