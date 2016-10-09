@@ -9,7 +9,6 @@ if (typeof process.argv[2] !== "undefined") {
 // app.use('/graphql', bodyParser.json(), apolloExpress({ schema: myGraphQLSchema }));
 	app.use('/graphql', graphQLHTTP({
 		schema: GLOBAL.schema,
-		rootValue: root,
 		graphiql: true,
 	}));
 	app.listen(PORT);
