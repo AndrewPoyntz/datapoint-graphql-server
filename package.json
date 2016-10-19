@@ -11,5 +11,8 @@
     "graphql": "^0.7.1",
     "express-graphql": "^0.5.4",
     "node-fetch": "^1.6.3"
+  },
+  "devDependencies": {
+    "moment": "^2.15.1"
   }
 }
